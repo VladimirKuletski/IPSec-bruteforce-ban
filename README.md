@@ -1,9 +1,15 @@
 # IPSec-bruteforce-ban
 This script parses log messages to find failed IPSec connections and adds to Firewall address list.
-You'll need to add firewall rule to block connections from origins which are in address list.
-E. g.: `/ip firewall raw
-add action=drop chain=prerouting src-address-list=IPSEC`
 
+Works on RouterOS 7.19.3
+
+You'll need to add firewall rule to block connections from origins which are in address list.
+Examples: 
+- `/ip firewall raw
+add action=drop chain=prerouting src-address-list=IPSEC`
+- `/ip firewall filter
+add action=drop chain=input comment="Stop bruteforce to IPsec services" \
+    connection-state=new in-interface=<internet intefrace> src-address-list=IPSEC
 
 
 **How to...**
