@@ -1,6 +1,10 @@
 /system scheduler
-add interval=5m name=IPSec-bruteforce-ban policy=read,write,policy,test start-date=jan/01/2020 start-time=\
-    00:00:01 on-event=":\
+add interval=5m name=IPSec-bruteforce-ban on-event="/system script run \"IPSec-bruteforce-ban\"" policy=\
+    read,write,policy,test start-date=jan/01/2020 start-time=00:01:01
+
+/system script
+add dont-require-permissions=no name=IPSec-bruteforce-ban owner=admin policy=\
+    read,write,policy,test source=":\
     local logMessage \"\"\r\
     \n:local logIp \"\"\r\
     \n/log\r\
