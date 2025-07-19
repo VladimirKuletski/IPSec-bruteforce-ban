@@ -8,8 +8,7 @@ Examples:
 - `/ip firewall raw
 add action=drop chain=prerouting src-address-list=IPSEC`
 - `/ip firewall filter
-add action=drop chain=input comment="Stop bruteforce to IPsec services" \
-    connection-state=new in-interface=<internet interface> src-address-list=IPSEC`
+add action=drop chain=input comment="Stop bruteforce to IPsec services" connection-state=new in-interface=<internet interface> src-address-list=IPSEC`
 
 
 **How to...**
