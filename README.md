@@ -7,7 +7,7 @@ add action=drop chain=prerouting src-address-list=IPSEC`
 
 
 **How to...**
-1. Download [IPSec-bruteforce-ban.rsc]() on your mikrotik router `/tool fetch url="`.
+1. Download [IPSec-bruteforce-ban.rsc](https://raw.githubusercontent.com/VladimirKuletski/IPSec-bruteforce-ban/refs/heads/main/IPSec-bruteforce-ban.rsc) on your mikrotik router `/tool fetch url=https://raw.githubusercontent.com/VladimirKuletski/IPSec-bruteforce-ban/refs/heads/main/IPSec-bruteforce-ban.rsc"`.
 2. Import script `/import IPSec-bruteforce-ban.rsc`.
 3. Adjust scheduler permissions if required.
 
