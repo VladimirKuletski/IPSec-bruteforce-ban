@@ -5,10 +5,10 @@ Works on RouterOS 7.19.3
 
 You'll need to add firewall rule to block connections from origins which are in address list.
 Examples: 
-- `/ip firewall raw
+`/ip firewall raw
 add action=drop chain=prerouting src-address-list=IPSEC`
-    or
-- `/ip firewall filter
+or
+`/ip firewall filter
 add action=drop chain=input comment="Stop bruteforce to IPsec services" \
     connection-state=new in-interface=<internet interface> src-address-list=IPSEC
 
