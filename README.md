@@ -7,6 +7,7 @@ You'll need to add firewall rule to block connections from origins which are in 
 Examples: 
 - `/ip firewall raw
 add action=drop chain=prerouting src-address-list=IPSEC`
+or
 - `/ip firewall filter
 add action=drop chain=input comment="Stop bruteforce to IPsec services" \
     connection-state=new in-interface=<internet interface> src-address-list=IPSEC
