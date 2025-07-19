@@ -7,14 +7,13 @@ You'll need to add firewall rule to block connections from origins which are in 
 Examples:
 - `/ip firewall raw`
 `add action=drop chain=prerouting src-address-list=IPSEC`
-or
 - `/ip firewall filter`
 `add action=drop chain=input comment="Stop bruteforce to IPsec services" connection-state=new in-interface=<internet interface> src-address-list=IPSEC`
 
 
 **How to...**
-1. Download [IPSec-bruteforce-ban.rsc](https://raw.githubusercontent.com/VladimirKuletski/IPSec-bruteforce-ban/refs/heads/main/IPSec-bruteforce-ban.rsc) on your mikrotik router `/tool fetch url="https://raw.githubusercontent.com/VladimirKuletski/IPSec-bruteforce-ban/refs/heads/main/IPSec-bruteforce-ban.rsc"  mode=https dst-path=IPSec-bruteforce-ban.rsc`.
-2. Import script `/import IPSec-bruteforce-ban.rsc`.
+1. Download [IPSec-bruteforce-ban.rsc](https://raw.githubusercontent.com/VladimirKuletski/IPSec-bruteforce-ban/refs/heads/main/IPSec-bruteforce-ban.rsc) on your mikrotik router `/tool fetch url="https://raw.githubusercontent.com/VladimirKuletski/IPSec-bruteforce-ban/refs/heads/main/IPSec-bruteforce-ban.rsc"  mode=https dst-path=IPSec-bruteforce-ban.rsc`
+2. Import script `/import IPSec-bruteforce-ban.rsc`
 3. Adjust scheduler permissions if required.
 
 
